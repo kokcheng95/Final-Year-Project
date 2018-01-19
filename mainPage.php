@@ -12,12 +12,12 @@
 			<div class="left"></div>
 			<div class="right">
 			<div class="formBox">
-				<form method="POST" action="mainPage.php">
+				<form >
 					<p>Username</p>
 					<input type="text" name="username" placeholder="Username">
 					<p>Password</p>
 					<input type="Password" name="password" placeholder="********">
-					<input type="submit" name="submit" value="LOGIN">
+					<input type="submit" ></button>
 					<a href="#">Forget Password</a>
 				</form>
 				</div>

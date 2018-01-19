@@ -1,20 +1,53 @@
 body{
 	margin:0;
 	padding:0;
-	background:url("queue.jpg");
 	background-size:cover;
 	background-repeat:no-repeat;
 	background-attachment:fixed;
 	font-family:san-serif;
 
 }
+.background-image {
+position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: auto;
+	height: auto;
+	background-image: url('queue.jpg');
+	background-size: cover;
+	-webkit-filter: blur(4px);
+	z-index: -1;
+}
 
+.content:before {
+  position: absolute;
+	top: 0px;
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	width: auto;
+	height: auto;
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65)));
+	z-index: 2;
+	opacity: 0.7;
+}
 .panel{
+	
 	border:0px;
 	background:rgba(0,0,0,0.5);
 	color:#ffff;
-	text-align:center;
-	padding-top
+	text-align:center;	
+	padding-top:70px;
+	position: relative;
+	transition: 1s;
+	 
+    
+}
+.form-control{
+	
+
 }
 	
 
@@ -37,9 +70,70 @@ span{
 	-o-border-radius:4px;
 	border-radius:4px;
 	margin-left:10px;
-	-webkit-box-shadow:10px 10px 10px rgba(0,0,0,0.5);
+	-webkit-box-shadow:-10px 10px 10px rgba(0,0,0,0.5);
 	box-shadow:-10px 10px 10px rgba(0,0,0,0.5);
 	
-	
-	
+}
+.fa-facebook{
+	color:#3B5998;
+}
+.fa-twitter{
+	color:#1DA1F2;
+}
+.fa-google-plus{
+	color:red;
+}
+.lock{
+	position: absolute;
+	top: -50px;
+	width: 100px;
+	height: 100px;
+	line-height: 112px;
+	text-align: center;
+	left:37%;
+	background: linear-gradient(DarkSlateGray,Cyan);
+	background: -webkit-gradient(DarkSlateGray,Cyan);
+	background: -moz-linear-gradient(DarkSlateGray,Cyan);
+	border: 3px outset #F4E10A;
+	-webkit-border-radius: 100%;
+	-moz-border-radius: 100%;
+	-ms-border-radius: 100%;
+	-o-border-radius: 100%;
+	border-radius: 100%; 
+	color: #fff;
+	-box-shadow: -10px 10px 20px rgba(255,255,255,0.5);
+	-webkit-box-shadow:-10px 10px 20px rgba(255,255,255,0.5);
+}
+.panel:hover{
+	background: rgba(0,0,0,0.7);
+}
+.label{
+	position: absolute;
+	top: 10px;
+	left: -20px;
+	width: 130px;
+	height: 40px;
+	line-height: 40px;
+	color: #0A0000;
+	font-weight: bold;
+	transform: rotate(-20deg);
+	background:#0CFDD8; 
+	box-shadow 3px 3px 3px rgba(0,0,0,0.5)
+}
+.label2{
+	position: absolute;
+	top: 0px;
+	left: -18px;
+	width: 130px;
+	height: 40px;
+	line-height: 35px;
+	color: #fff;
+	font-weight: bold;
+	transform: rotate(-27deg);
+	background:#7B7B7A; 
+	z-index:-1;
+}
+.btn-success{
+	border: 0px;
+	border-radius: 0px;
 }

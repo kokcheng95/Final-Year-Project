@@ -16,51 +16,61 @@
 
 </head>
 <body>
+	<div class="background-image"></div>
+	<div class="content"></div><!--content-->
+		<div class="container" style="margin-top:100px;">
+			<div class="row">
+		
+		
+				<div class="col-md-4 col-md-offset-4">
+					
+					<div class="panel panel-default">
+					<h4>Register here</h4><br>
+				
+					<span><i class="fa fa-facebook"></i></span>
+					<span><i class="fa fa-twitter"></i></span>
+					<span><i class="fa fa-google-plus"></i></span>
+					<br><br>
+					<h4>OR</h4><hr>
+				
+						<div class="panel-body">
+							<form method="post" action="register.php">
+								<?php include('errors.php'); ?>
+								<div class="form-group" data-validate = "Valid Name is required">
+								
+									<input type="text" name="username" class="form-control" placeholder="First and Last Name" >
+									</div> 
+								<div class="form-group" data-validate = "Valid Email is required :kokcheng@xxxx.com">
+								
+								<input type="email" name="email" class="form-control" placeholder="Email Address" >
+								</div>
+								<div class="form-group" data-validate = "Password is required ">
+								
+								<input type="password" name="password_1" class="form-control" placeholder="Password">
+								</div>
+								<div class="form-group" data-validate = "Password is required ">
+								
+								<input type="password" name="password_2" class="form-control" placeholder="Confirm Password">
+								</div>
+								<div class="form-group">
+								<button type="submit" class="btn btn-success btn-lg btn-block" name="reg_user" value="Login">Register</button>
+								</div>
+								<p>
+								Already a member? <a href="login.php">Sign in</a>
+								</p>
+								</form>
+							</div><!--panel-body-->
+							<div class="lock"><i class="fa fa-lock fa-3x"></i></div>
+							<div class="label">Registration Form</div>
+							<div class="label2"></div>
 
-	<div class="container" style="margin-top:100px">
-		<div class="row">
-			<div class="colunm">
+						</div><!--panel-default-->
+					</div><!--colunm-->
+				</div> <!-- row-->
 			
-				<div class="panel panel-default">
-				<h4>Register here</h4><br>
-				
-				<span><i class="fa fa-facebook"></i></span>
-				<span><i class="fa fa-twitter"></i></span>
-				<span><i class="fa fa-google-plus"></i></span>
-				<br><br>
-				
-					<div class="panel-body">
-						<form method="post" action="register.php">
-							<?php include('errors.php'); ?>
-							<div class="input-group" data-validate = "Valid Name is required">
-							<label>Username</label>
-							<input type="text" name="username" placeholder="First and Last Name" >
-							</div> 
-							<div class="input-group" data-validate = "Valid Email is required :kokcheng@xxxx.com"
-							<label>Email</label>
-							<input type="email" name="email" placeholder="Email Address" value="<?php echo $email; ?>">
-							</div>
-							<div class="input-group" data-validate = "Password is required "
-							<label>Password</label>
-							<input type="password" name="password_1" placeholder="Password">
-							</div>
-							<div class="input-group" data-validate = "Password is required "
-							<label>Confirm password</label>
-							<input type="password" name="password_2" placeholder="Confirm Password">
-							</div>
-							<div class="input-group">
-							<button type="submit" class="btn" name="reg_user">Register</button>
-							</div>
-							<p>
-							Already a member? <a href="login.php">Sign in</a>
-							</p>
-							</form>
-					</div><!--panel-body-->
-				</div><!--panel-default-->
-			</div><!--colunm-->
-		</div> <!-- row-->
+			</div><!-- Container-->
+		
 	
-	</div><!-- Container-->
   
 </body>
 </html>
