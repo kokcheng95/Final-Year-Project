@@ -79,6 +79,7 @@
             <button class="btn btn_primary" id="btn">test</button>
         </div>
     </div>
+
 <script>
 $(document).ready(function(){
     $("#btn_register").click(function(){
@@ -91,7 +92,12 @@ $(document).ready(function(){
             $.ajax({type: "POST", url: "testdb.php",data: {username:$("#username").val(),email:$("#em").val(),password:$("#ps").val()},success: function(){},});
             }
     });
-});                                                              
+});                    
+                    
+            
+            
+        
+    
 </script>   
 </body>
 </html>

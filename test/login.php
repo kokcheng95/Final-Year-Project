@@ -1,52 +1,28 @@
+<?php include('loginDB.php') ?>
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-    
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>freequeue</title>
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
-    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
-    <link rel="stylesheet" href="assets/fonts/material-icons.css">
-    <link rel="stylesheet" href="assets/css/Pretty-Footer.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/css/lightbox.min.css">
-    <link rel="stylesheet" href="assets/css/Pretty-Registration-Form.css">
-    <link rel="stylesheet" href="assets/css/styles.css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script>
-        $(document).ready(function(){
-
-            $("#btn").click(function(){
-                 
-              $.ajax({
-                
-                    type: "POST",
-                    url: "testdb.php",
-                    data: {
-                          username:$("#username").val(),
-                          email:$("#email").val(),
-                          password:$("#password").val()
-
-                    },
-                     
-                     success: function(){
-
-                    },
-                    
-                   
-                        });
-
-
-                });
-
-         });</script>
+	<title>FreeQueue</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">	
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/animate/animate.css">
+<!--===============================================================================================-->	
+	<link rel="stylesheet" type="text/css" href="assets/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="assets/css/util.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/main.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+<!--===============================================================================================-->
 </head>
-
 <body>
-    <nav class="navbar navbar-inverse navbar-fixed-top">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
                 <a class="navbar-brand navbar-link" href="#"><img src="assets/img/freeQueue.png" id="logo"><strong>FreeQ</strong>ueue </a>
@@ -54,65 +30,93 @@
             </div>
             <div class="collapse navbar-collapse" id="navcol-1">
                 <ul class="nav navbar-nav navbar-right">
-                    <li  role="presentation"><a href="#">Home </a></li>
-                    <li  role="presentation"><a href="#">About </a></li>
-                    <li  class="active" role="presentation"><a href="#">Login </a></li>
+                    <li role="presentation" ><a href="index.html">Home </a></li>
+                    <li role="presentation"><a href="#">About </a></li>
+                    <li class="active"><a href="login.php">Login </a></li>
                 </ul>
             </div>
         </div>
     </nav>
-    <div class="background-image"></div>
-    <div class="content"></div><!--content-->
-            <div class="row register-form">
-                <div class="col-md-8 col-md-offset-2">
-                    <form class="form-horizontal custom-form" method="POST" action="">
-                        <h1>Register Form</h1>
-                        <div class="form-group" >
-                            <div class="col-sm-4 label-column " >
-                                <label class="control-label" for="name-input-field">Name </label>
-                            </div>
-                            <div class="col-sm-6 input-column validate-input" data-validate = "Valid Name is required">
-                                <input class="form-control "   type="text" id="username">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-4 label-column">
-                                <label class="control-label" for="email-input-field">Email </label>
-                            </div>
-                            <div class="col-sm-6 input-column">
-                                <input class="form-control" required id="email-input-field" type="email" id="email">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-4 label-column" data-validate = "password Name is required">
-                                <label class="control-label" for="pawssword-input-field">Password </label>
-                            </div>
-                            <div class="col-sm-6 input-column">
-                                <input class="form-control" required id="pawssword-input-field" type="password" id="password">
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="col-sm-4 label-column">
-                                <label class="control-label" for="repeat-pawssword-input-field">Repeat Password </label>
-                            </div>
-                            <div class="col-sm-6 input-column">
-                                <input class="form-control" required id="repeat-pawssword-input-field" type="password" title="Please use only 6 digit">
-                            </div>
-                        </div>
+	<div class="limiter">
+	
+		<div class="container-login100">
+		
+			<div class="wrap-login100">
+			<span class="login100-form-mainTitle">
+					<strong>FreeQ</strong>ueue
+					</span>
+				<div class="login100-pic js-tilt" data-tilt>
+					<img src="assets/img/freeQueue.png" alt="IMG">
+				</div>
 
-                        <div class="checkbox">
-                            <label>
-                                <input type="checkbox" required>I've read and accept the terms and conditions</label>
-                        </div>
-                        <button class="btn btn-default submit-button" type="submit" id="btn">Register</button>
-                    </form>
-                </div>
-            </div>
-    <script src="assets/js/jquery.min.js"></script>
-    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.10.0/js/lightbox-plus-jquery.min.js"></script>
-    
-    
+				<form class="login100-form validate-form" method="POST" action="login.php">
+				  	
+					
+					<span class="login100-form-title">
+						Log In Here
+					</span>
+
+					<div class="wrap-input100 validate-input" data-validate = "Valid email is required :kokcheng@xxxx.com">
+						<input class="input100 validate-control" type="text" name="email" placeholder="Email">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-envelope" aria-hidden="true"></i>
+						</span>
+					</div>
+
+					<div class="wrap-input100 validate-input" data-validate = "Password is required">
+						<input class="input100 validate-control" type="password" name="password" placeholder="Password">
+						<span class="focus-input100"></span>
+						<span class="symbol-input100">
+							<i class="fa fa-lock" aria-hidden="true"></i>
+						</span>
+					</div>
+					
+					<div class="container-login100-form-btn">
+						<button type="submit" class="login100-form-btn" name="login">
+							Login
+						</button>
+					</div>
+
+					<div class="text-center p-t-12">
+						<span class="txt1">
+							Forgot
+						</span>
+						<a class="txt2" href="#">
+							Username / Password?
+						</a>
+					</div>
+
+					<div class="text-center p-t-136">
+						<a class="txt2" href="register.php">
+							Create your Account
+							<i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
+						</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+	
+	
+
+	
+<!--===============================================================================================-->	
+	<script src="assets/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/bootstrap/js/popper.js"></script>
+	<script src="assets/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="assets/tilt/tilt.jquery.min.js"></script>
+	<script >
+		$('.js-tilt').tilt({
+			scale: 1.1
+		})
+	</script>
+<!--===============================================================================================-->
+	<script src="assets/js/validate.js"></script>
+
 </body>
-
 </html>

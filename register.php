@@ -42,7 +42,7 @@
 									</div> 
 								<div class="form-group" data-validate = "Valid Email is required :kokcheng@xxxx.com">
 								
-								<input type="email" name="email" class="form-control" placeholder="Email Address" >
+								<input type="email" name="email" class="form-control" placeholder="Email Address" value="<?php echo $email; ?>">
 								</div>
 								<div class="form-group" data-validate = "Password is required ">
 								
